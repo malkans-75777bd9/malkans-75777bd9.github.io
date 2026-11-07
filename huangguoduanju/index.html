@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>黄果短剧官方入口-官方平台入口_热门短剧在线观看_黄果短剧最新剧集</title>
+  <meta name="description" content="黄果短剧官方入口——专注短剧内容聚合与观看指引。提供黄果短剧最新热门剧集推荐、官方入口指引、深度剧评、更新动态与用户真实讨论，帮助短剧爱好者快速找到心仪短剧，掌握追更节奏。">
+  <meta name="keywords" content="黄果短剧官方入口,黄果短剧,热门短剧,短剧在线观看,短剧推荐">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23ff7a2f'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif'%3E黄%3C/text%3E%3C/svg%3E">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0e0b1a;
+      --bg-soft: #19162b;
+      --surface: #221e3a;
+      --surface-light: #2f2a4a;
+      --border: #3b3560;
+      --primary: #ff7a2f;
+      --primary-glow: #ff9a5a;
+      --secondary: #a56eff;
+      --accent: #4fd1c5;
+      --text: #f0edff;
+      --text-secondary: #b6b0d6;
+      --text-muted: #807aa5;
+      --card-radius: 18px;
+      --shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.6);
+      --shadow-hover: 0 18px 36px -10px rgba(255, 122, 47, 0.25);
+      --transition: all 0.25s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 顶部导航 */
+    .nav-hg {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(14, 11, 26, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo-hg {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.45rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 900;
+      box-shadow: 0 0 18px rgba(255, 122, 47, 0.4);
+    }
+
+    .logo-text span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 20px;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-glow);
+      border-bottom-color: var(--primary);
+    }
+
+    .search-mini {
+      display: flex;
+      align-items: center;
+      background: var(--surface);
+      border-radius: 30px;
+      padding: 4px 6px 4px 16px;
+      border: 1px solid var(--border);
+    }
+
+    .search-mini input {
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-size: 0.88rem;
+      padding: 6px 0;
+      outline: none;
+      width: 140px;
+    }
+
+    .search-mini input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-mini button {
+      background: var(--primary);
+      border: none;
+      color: #fff;
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .search-mini button:hover {
+      background: var(--primary-glow);
+    }
+
+    /* 板块通用 */
+    .sec-hg {
+      padding: 48px 0;
+      border-bottom: 1px solid rgba(59, 53, 96, 0.5);
+    }
+
+    .sec-hg:last-of-type {
+      border-bottom: none;
+    }
+
+    .sec-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sec-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 30px;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+      border-radius: 4px;
+    }
+
+    /* Banner */
+    .banner-hg {
+      background: radial-gradient(circle at 70% 20%, rgba(255, 122, 47, 0.18), transparent 60%),
+                  radial-gradient(circle at 20% 80%, rgba(165, 110, 255, 0.15), transparent 60%),
+                  var(--bg-soft);
+      border-radius: 0 0 48px 48px;
+      padding: 48px 0 56px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .banner-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .banner-h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      max-width: 850px;
+    }
+
+    .banner-h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .banner-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 750px;
+      line-height: 1.7;
+    }
+
+    .banner-search {
+      display: flex;
+      max-width: 550px;
+      background: var(--surface);
+      border-radius: 60px;
+      padding: 6px 6px 6px 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-search input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text);
+      font-size: 1rem;
+      padding: 10px 0;
+    }
+
+    .banner-search input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .banner-search button {
+      background: var(--primary);
+      border: none;
+      color: #fff;
+      border-radius: 60px;
+      padding: 12px 28px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .banner-search button:hover {
+      background: var(--primary-glow);
+      box-shadow: 0 0 24px rgba(255, 122, 47, 0.5);
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+    }
+
+    .quick-links a {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 8px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .quick-links a:hover {
+      border-color: var(--primary);
+      color: var(--primary-glow);
+      background: rgba(255, 122, 47, 0.1);
+    }
+
+    /* 卡片网格 */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card-hg {
+      background: var(--surface);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border);
+      padding: 20px 20px 18px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-hg:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(255, 122, 47, 0.4);
+    }
+
+    .card-cover {
+      height: 90px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #2f2a4a, #1d1a30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.08);
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-cover span {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 1.8rem;
+      opacity: 0.7;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text);
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag-sm {
+      background: rgba(165, 110, 255, 0.15);
+      color: #c9b3ff;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+      border: 1px solid rgba(165, 110, 255, 0.2);
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      border-top: 1px solid rgba(59, 53, 96, 0.5);
+      padding-top: 12px;
+    }
+
+    .hot-num {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* 列表样式 */
+    .list-news {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .list-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(59, 53, 96, 0.3);
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .list-time {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      min-width: 70px;
+      font-weight: 500;
+    }
+
+    .list-title {
+      font-weight: 600;
+      color: var(--text);
+      flex: 1;
+      font-size: 0.98rem;
+    }
+
+    .list-summary {
+      width: 100%;
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      padding-left: 86px;
+    }
+
+    @media (max-width: 600px) {
+      .list-summary {
+        padding-left: 0;
+      }
+    }
+
+    .list-item:hover .list-title {
+      color: var(--primary-glow);
+    }
+
+    /* 分类入口 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+    }
+
+    .cat-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 12px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .cat-item:hover {
+      border-color: var(--primary);
+      color: var(--primary-glow);
+      background: rgba(255, 122, 47, 0.08);
+      transform: translateY(-3px);
+    }
+
+    /* 深度解析 */
+    .deep-article h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 28px 0 14px;
+      color: var(--text);
+    }
+
+    .deep-article p {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .deep-article strong {
+      color: var(--text);
+    }
+
+    /* 体验指南 */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .guide-item {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 22px 20px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .guide-item:hover {
+      border-color: rgba(79, 209, 197, 0.4);
+    }
+
+    .guide-icon {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .guide-item h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .guide-item p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 18px 22px;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(255, 122, 47, 0.3);
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      cursor: default;
+    }
+
+    .faq-q::after {
+      content: '＋';
+      color: var(--primary);
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    .faq-a {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      border-top: 1px solid rgba(59, 53, 96, 0.5);
+      padding-top: 12px;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .comment-item:hover {
+      border-color: rgba(79, 209, 197, 0.25);
+    }
+
+    .comment-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .comment-user {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--primary-glow);
+    }
+
+    .comment-date {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .comment-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* 资讯卡片 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 18px;
+    }
+
+    .news-card {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 20px 22px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .news-card:hover {
+      border-color: rgba(255, 122, 47, 0.35);
+      transform: translateY(-3px);
+    }
+
+    .news-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .news-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .footer-hg {
+      background: var(--bg-soft);
+      padding: 44px 0 32px;
+      margin-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-hg h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    .footer-hg p,
+    .footer-hg li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      list-style: none;
+    }
+
+    .footer-hg a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-hg a:hover {
+      color: var(--primary-glow);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(59, 53, 96, 0.5);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .banner-h1 {
+        font-size: 2.1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .sec-title {
+        font-size: 1.45rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .banner-h1 {
+        font-size: 1.6rem;
+      }
+      .banner-search {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        gap: 10px;
+      }
+      .banner-search input {
+        background: var(--surface);
+        border-radius: 60px;
+        border: 1px solid var(--border);
+        padding: 14px 20px;
+      }
+      .banner-search button {
+        width: 100%;
+        padding: 14px;
+      }
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search-mini {
+        width: 100%;
+      }
+      .search-mini input {
+        flex: 1;
+        width: auto;
+      }
+      .sec-hg {
+        padding: 32px 0;
+      }
+      .list-title {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航 -->
+  <header class="nav-hg" id="nav">
+    <div class="wrap nav-inner">
+      <div class="logo-hg">
+        <span class="logo-badge">黄</span>
+        <span class="logo-text">黄果<span>短剧</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comment">用户评论</a>
+        <a href="/#news">资讯动态</a>
+      </div>
+      <div class="search-mini">
+        <input type="text" placeholder="搜索短剧、演员、关键词..." aria-label="站内搜索">
+        <button>搜索</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner-hg" id="banner">
+    <div class="wrap banner-content">
+      <h1 class="banner-h1"><em>黄果短剧官方入口</em>——一页纵览热门短剧与官方追更指引</h1>
+      <p class="banner-desc">
+        聚合黄果短剧官方入口最新剧集、热度榜单与深度剧评，从都市逆袭到古装甜宠，快速筛选适合你的短剧内容。
+      </p>
+      <p class="banner-desc" style="font-size:0.95rem;color:var(--text-muted);max-width:750px;">
+        2026年11月7日更新 · 覆盖官方入口指引、短剧类型解析、追更节奏建议与用户真实讨论，帮助你在海量短剧中高效找到想看的那一部。
+      </p>
+      <div class="banner-search">
+        <input type="text" placeholder="输入剧名/演员/题材，如「逆袭」「甜宠」「悬疑」" aria-label="搜索短剧">
+        <button>立即查找</button>
+      </div>
+      <div class="quick-links">
+        <a href="/#hot">🔥 热门短剧</a>
+        <a href="/#latest">📅 今日更新</a>
+        <a href="/#deep">📖 深度解析</a>
+        <a href="/#guide">📱 体验指南</a>
+        <a href="/#faq">❓ 常见问题</a>
+        <a href="/#comment">💬 用户评论</a>
+        <a href="/#news">📰 短剧资讯</a>
+        <a href="/#cat">📂 分类入口</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容简介 / 平台介绍 -->
+  <section class="sec-hg" id="intro">
+    <div class="wrap">
+      <h2 class="sec-title">关于黄果短剧官方入口</h2>
+      <div class="deep-article" style="max-width:900px;">
+        <p>
+          <strong>黄果短剧官方入口</strong>是短剧爱好者发现优质内容的导航式专题页。在短剧内容爆发式增长的当下，用户面临的不再是“没得看”，而是“选择太多、入口分散、质量参差”。本页围绕黄果短剧官方入口这一核心需求，将热门剧集、类型分类、更新节奏与用户口碑整合为清晰的浏览路径，让每一次打开页面都能快速定位到感兴趣的内容。
+        </p>
+        <p>
+          无论你是偏爱都市逆袭、古装甜宠、悬疑反转还是家庭伦理题材，黄果短剧官方入口页面都按照短剧的消费习惯进行了结构化整理。每部推荐内容均标注类型标签、剧情看点与热度参考，同时保留足够的信息密度，避免“标题党式”的无效点击。对于习惯追更的用户，最新更新模块按时间线排列当日与近期的剧集动态，帮助你跟上官方更新节奏。
+        </p>
+        <p>
+          值得收藏的原因在于：本页并非一次性文章，而是围绕黄果短剧官方入口这一主题持续维护的内容聚合页。分类入口、深度解析、FAQ与用户评论共同构成了一个可以反复访问的短剧消费决策参考。你可以把它当作短剧的“书架目录”——先看类型，再看口碑，最后决定从哪一部开始。对于刚接触短剧的新用户，建议从热门推荐和FAQ入手；老用户则可以直接跳转最新更新与深度解析，快速筛选值得追更的剧目。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门推荐 -->
+  <section class="sec-hg" id="hot">
+    <div class="wrap">
+      <h2 class="sec-title">热门短剧推荐 · 黄果短剧官方入口精选</h2>
+      <div class="grid-cards">
+        <div class="card-hg">
+          <div class="card-cover"><span>逆袭</span></div>
+          <div class="card-title">《逆风翻盘》</div>
+          <div class="card-tags"><span class="tag-sm">都市</span><span class="tag-sm">逆袭</span><span class="tag-sm">爽剧</span></div>
+          <div class="card-desc">外卖员意外获得系统加持，从被轻视到逆袭人生。节奏紧凑，每集都有反转爽点。</div>
+          <div class="card-meta"><span>🔥 热度 96.2万</span><span>更新至 32 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>甜宠</span></div>
+          <div class="card-title">《偏偏宠爱》</div>
+          <div class="card-tags"><span class="tag-sm">甜宠</span><span class="tag-sm">先婚后爱</span><span class="tag-sm">高甜</span></div>
+          <div class="card-desc">契约婚姻变真心，冷面总裁与元气设计师的日常甜度超标，适合下饭放松。</div>
+          <div class="card-meta"><span>🔥 热度 88.5万</span><span>更新至 24 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>悬疑</span></div>
+          <div class="card-title">《第七夜》</div>
+          <div class="card-tags"><span class="tag-sm">悬疑</span><span class="tag-sm">反转</span><span class="tag-sm">短平快</span></div>
+          <div class="card-desc">七天内连续发生离奇事件，女主层层推理揭开真相。每集结尾留钩子，停不下来。</div>
+          <div class="card-meta"><span>🔥 热度 82.1万</span><span>更新至 18 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>古装</span></div>
+          <div class="card-title">《凤归朝》</div>
+          <div class="card-tags"><span class="tag-sm">古装</span><span class="tag-sm">权谋</span><span class="tag-sm">大女主</span></div>
+          <div class="card-desc">女将军重生归来，在朝堂与战场间步步为营。服化道精致，剧情不拖沓。</div>
+          <div class="card-meta"><span>🔥 热度 79.8万</span><span>更新至 28 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>家庭</span></div>
+          <div class="card-title">《屋檐下的秘密》</div>
+          <div class="card-tags"><span class="tag-sm">家庭</span><span class="tag-sm">伦理</span><span class="tag-sm">催泪</span></div>
+          <div class="card-desc">一个普通家庭的十年变迁，聚焦亲情与和解。剧情细腻，适合喜欢现实题材的观众。</div>
+          <div class="card-meta"><span>🔥 热度 74.3万</span><span>更新至 20 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>喜剧</span></div>
+          <div class="card-title">《老板来了》</div>
+          <div class="card-tags"><span class="tag-sm">职场喜剧</span><span class="tag-sm">沙雕</span><span class="tag-sm">轻松</span></div>
+          <div class="card-desc">小公司里一群奇葩员工的日常，笑点密集。每集十分钟，通勤路上就能刷完。</div>
+          <div class="card-meta"><span>🔥 热度 70.6万</span><span>更新至 36 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>玄幻</span></div>
+          <div class="card-title">《灵脉觉醒》</div>
+          <div class="card-tags"><span class="tag-sm">玄幻</span><span class="tag-sm">修炼</span><span class="tag-sm">热血</span></div>
+          <div class="card-desc">废柴少年意外觉醒上古灵脉，开启逆天修炼之路。特效在短剧中属上乘。</div>
+          <div class="card-meta"><span>🔥 热度 68.9万</span><span>更新至 26 集</span></div>
+        </div>
+        <div class="card-hg">
+          <div class="card-cover"><span>青春</span></div>
+          <div class="card-title">《盛夏不散场》</div>
+          <div class="card-tags"><span class="tag-sm">青春</span><span class="tag-sm">校园</span><span class="tag-sm">治愈</span></div>
+          <div class="card-desc">高三那年的友谊与心动，清新不狗血。适合怀念校园时光的观众。</div>
+          <div class="card-meta"><span>🔥 热度 65.4万</span><span>更新至 16 集</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="sec-hg" id="latest">
+    <div class="wrap">
+      <h2 class="sec-title">最新更新 · 2026年11月7日</h2>
+      <div class="list-news">
+        <div class="list-item">
+          <span class="list-time">11月7日 10:23</span>
+          <span class="list-title">《逆风翻盘》第33集上线，主角正式接手公司</span>
+          <span class="list-summary">本集迎来关键转折，逆袭线进入新阶段，同时埋下竞争对手伏笔。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月7日 09:45</span>
+          <span class="list-title">《偏偏宠爱》第25集更新，先婚后爱剧情升温</span>
+          <span class="list-summary">男女主感情线明显推进，本集高甜片段较多，适合CP粉追更。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月7日 08:30</span>
+          <span class="list-title">《第七夜》第19集反转再升级</span>
+          <span class="list-summary">上一集留下的线索被推翻，真凶身份出现新可能，讨论区热度上升。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月6日 21:10</span>
+          <span class="list-title">《凤归朝》第29集：朝堂对峙名场面</span>
+          <span class="list-summary">大女主戏份集中爆发，台词与节奏获用户好评，单集弹幕量创新高。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月6日 19:40</span>
+          <span class="list-title">《老板来了》第37集新员工入职</span>
+          <span class="list-summary">新角色加入带来更多喜剧冲突，办公室日常再添笑料。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月6日 16:20</span>
+          <span class="list-title">《屋檐下的秘密》第21集家庭矛盾升级</span>
+          <span class="list-summary">剧情进入现实向高潮，角色选择引发观众讨论，评论区观点分化。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月6日 14:05</span>
+          <span class="list-title">《灵脉觉醒》第27集：灵脉突破新境界</span>
+          <span class="list-summary">战斗场面升级，特效投入明显增加，玄幻爱好者可关注。</span>
+        </div>
+        <div class="list-item">
+          <span class="list-time">11月5日 22:00</span>
+          <span class="list-title">《盛夏不散场》第17集：毕业季前奏</span>
+          <span class="list-summary">青春群像戏进入尾声阶段，情感线收束自然，评分稳定。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="sec-hg" id="cat">
+    <div class="wrap">
+      <h2 class="sec-title">短剧分类入口</h2>
+      <div class="cat-grid">
+        <a href="/#hot" class="cat-item">都市逆袭</a>
+        <a href="/#hot" class="cat-item">古装甜宠</a>
+        <a href="/#hot" class="cat-item">悬疑推理</a>
+        <a href="/#hot" class="cat-item">家庭伦理</a>
+        <a href="/#hot" class="cat-item">职场喜剧</a>
+        <a href="/#hot" class="cat-item">玄幻热血</a>
+        <a href="/#hot" class="cat-item">青春校园</a>
+        <a href="/#hot" class="cat-item">重生穿越</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="sec-hg" id="deep">
+    <div class="wrap">
+      <h2 class="sec-title">深度解析 · 短剧消费与选择逻辑</h2>
+      <div class="deep-article">
+        <h3>短剧为什么让人停不下来？</h3>
+        <p>
+          短剧的节奏与传统长剧有本质区别。单集通常在1-3分钟，第一集就抛出核心冲突，第三集开始密集反转。这种设计精准匹配了移动端碎片化消费习惯。用户在寻找<strong>黄果短剧官方入口</strong>时，本质上是在寻找一种“低门槛、高反馈”的内容消费体验。热门短剧往往在前30秒内完成“人物困境—冲突升级—情绪释放”的闭环，这也是为什么很多用户一刷就是十几集。
+        </p>
+        <h3>题材选择的底层逻辑</h3>
+        <p>
+          从当前短剧市场来看，都市逆袭、古装甜宠、悬疑反转三大类占据了主要流量。逆袭类满足“代入式翻盘”的心理需求，甜宠类提供稳定的情绪价值，悬疑类则依靠信息差制造追更动力。黄果短剧官方入口页面在推荐卡片中标注了类型标签与核心看点，目的就是帮助用户根据当下心情快速匹配。如果你刚接触短剧，建议从“轻喜剧”或“甜宠”入手，观剧门槛较低；喜欢强情节的可以从悬疑或逆袭题材开始。
+        </p>
+        <h3>短剧质量的分水岭在哪里？</h3>
+        <p>
+          短剧并非全是“爽完就忘”的快消品。制作层面的差异主要体现在三个方面：剧本逻辑是否自洽、演员表演是否自然、视听语言是否合格。部分头部短剧已经采用电影级的调色与剪辑，而粗制作品往往在第三集后出现明显的剧情崩塌。本页在推荐内容时，会优先选择更新稳定、口碑持续走高的剧目。用户在黄果短剧官方入口页面浏览时，可以重点关注“更新状态”与“用户评论”两个维度，交叉验证后再决定是否追更。
+        </p>
+        <h3>适合人群与观看建议</h3>
+        <p>
+          短剧适合通勤、午休、睡前等碎片时间消费。对于喜欢长篇叙事深度的观众，短剧可能显得单薄；但对于追求放松、快节奏娱乐的用户，短剧是高效的选择。建议搭配“1.5倍速+选择性跳集”的观看方式，遇到注水剧情果断跳过。黄果短剧官方入口页面的分类和热度排序可以作为筛选工具，但最终是否对味，还是要看前两集的实际观感。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="sec-hg" id="guide">
+    <div class="wrap">
+      <h2 class="sec-title">体验指南 · 如何高效使用本页</h2>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <div class="guide-icon">🧭</div>
+          <h4>先看分类再挑剧</h4>
+          <p>从顶部搜索或分类入口进入，按题材筛选，避免在大量推荐中迷失。每个分类都有关联的热门剧目。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">📱</div>
+          <h4>移动端阅读友好</h4>
+          <p>页面已适配手机屏幕，卡片和列表在窄屏下自动堆叠，通勤路上也能顺畅浏览。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">🔖</div>
+          <h4>收藏后持续追更</h4>
+          <p>最新更新模块按日期排列，建议收藏页面，每次打开直接查看当日更新，不错过关键剧情。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">💬</div>
+          <h4>参考真实评论</h4>
+          <p>用户评论来自不同偏好的人群，有推荐也有吐槽。综合判断比只看评分更靠谱。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">🔗</div>
+          <h4>相关推荐扩展</h4>
+          <p>深度解析和资讯模块会关联同类剧目与行业动态，帮助发现更多符合口味的内容。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-icon">📊</div>
+          <h4>热度作为参考</h4>
+          <p>热度值反映近期讨论度，但不完全等于质量。结合题材偏好和评论综合判断更有效。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec-hg" id="faq">
+    <div class="wrap">
+      <h2 class="sec-title">常见问题 · 关于黄果短剧官方入口</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">黄果短剧官方入口在哪里可以找到？</div>
+          <div class="faq-a">黄果短剧官方入口通常通过官方渠道发布，本页作为内容聚合与导航专题，提供热门剧目与类型索引，帮助用户快速定位想看的内容。建议通过官方应用或认证页面获取最新入口信息，避免非官方来源带来的风险。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">短剧一般每集多长时间？适合什么时间看？</div>
+          <div class="faq-a">多数短剧单集在1至3分钟，部分横屏短剧在5至10分钟。非常适合通勤、排队、午休等碎片时间。由于单集较短，建议一次预留15至30分钟，可以连续观看8至10集，体验完整剧情段落。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">如何判断一部短剧是否值得追？</div>
+          <div class="faq-a">可以从三个维度判断：前两集是否建立有效冲突、更新是否稳定、评论区是否有持续讨论。如果前两集节奏拖沓或逻辑明显不通，后续大概率也不会有质变。本页推荐卡片中的“热度”和“更新状态”可以作为初步筛选依据。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">黄果短剧官方入口包含哪些题材类型？</div>
+          <div class="faq-a">目前主流题材包括都市逆袭、古装甜宠、悬疑推理、家庭伦理、职场喜剧、玄幻热血、青春校园、重生穿越等。本页分类入口覆盖了这些方向，并会随着热门内容变化进行更新。不同题材的叙事节奏差异较大，建议根据个人偏好选择。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">短剧和传统电视剧的主要区别是什么？</div>
+          <div class="faq-a">核心区别在节奏与消费场景。短剧单集短、冲突密集、反转频繁，适合移动端碎片化观看；传统电视剧单集40分钟以上，注重人物弧光与叙事铺陈。两者并不冲突，短剧更像“内容零食”，长剧则是“正餐”。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">在哪里可以看到用户的真实评价？</div>
+          <div class="faq-a">本页用户评论模块收集了近期用户的追更反馈、剧情讨论和类型偏好，可以作为参考。此外，也可以结合多个平台的评论区交叉对比，避免单一评价带来的偏差。评论中提到的“注水”“烂尾”等关键词值得重点关注。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="sec-hg" id="comment">
+    <div class="wrap">
+      <h2 class="sec-title">用户评论 · 真实追更反馈</h2>
+      <div class="comment-grid">
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">追剧小马达</span><span class="comment-date">11月7日</span></div>
+          <div class="comment-text">《逆风翻盘》前20集真的爽，后面稍微有点拖，不过今天更新的33集又拉回来了。黄果短剧官方入口这个页面找剧挺方便。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">甜宠收割机</span><span class="comment-date">11月6日</span></div>
+          <div class="comment-text">《偏偏宠爱》第25集甜度超标！男女主演技在线，比某些长剧好看多了。先婚后爱永远的神。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">悬疑控老张</span><span class="comment-date">11月6日</span></div>
+          <div class="comment-text">《第七夜》追到19集，感觉凶手不止一个人，编剧在下一盘大棋。希望别烂尾，短剧最怕最后两集崩。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">古风爱好者</span><span class="comment-date">11月5日</span></div>
+          <div class="comment-text">《凤归朝》服化道在短剧里算很用心了，女主气场强，朝堂戏不儿戏。就是更新有点慢，等得着急。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">打工人小李</span><span class="comment-date">11月5日</span></div>
+          <div class="comment-text">《老板来了》下饭神器，每集一个笑点，不费脑。黄果短剧官方入口这个推荐页面挺全的，不用自己到处找。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">只看现实向</span><span class="comment-date">11月4日</span></div>
+          <div class="comment-text">《屋檐下的秘密》拍得挺真实的，有些情节看着压抑但确实是生活。适合慢慢看，不适合想放松的时候刷。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">玄幻老书虫</span><span class="comment-date">11月4日</span></div>
+          <div class="comment-text">《灵脉觉醒》特效比预期好，但剧情还是老套路。打发时间可以，别期待太高。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">毕业三年了</span><span class="comment-date">11月3日</span></div>
+          <div class="comment-text">《盛夏不散场》看着看着就想起自己高中，演员很青涩但挺真诚的。青春剧还是得看这种不油的。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">短剧新用户</span><span class="comment-date">11月3日</span></div>
+          <div class="comment-text">第一次看短剧，被朋友安利的。黄果短剧官方入口页面分类挺清楚，直接点甜宠就出来了，省得自己搜。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">资深剧评人</span><span class="comment-date">11月2日</span></div>
+          <div class="comment-text">短剧现在同质化严重，逆袭和甜宠占了七八成。这个页面里的悬疑和家庭题材算是一股清流，可以多推点。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">追更打卡</span><span class="comment-date">11月2日</span></div>
+          <div class="comment-text">每天来看最新更新已经成为习惯了，页面更新还挺及时，比刷信息流高效。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">不吃香菜</span><span class="comment-date">11月1日</span></div>
+          <div class="comment-text">有些短剧标题和内容完全两回事，建议推荐的时候把“雷点”也标一下，比如虐不虐、有没有烂尾风险。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">周末刷剧党</span><span class="comment-date">10月31日</span></div>
+          <div class="comment-text">周末一口气刷完了《老板来了》，36集花了不到两小时，短剧就这点好，不占时间。</div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><span class="comment-user">理性看剧</span><span class="comment-date">10月30日</span></div>
+          <div class="comment-text">黄果短剧官方入口这个专题页的深度解析写得不错，比单纯堆卡片有信息量。希望保持更新，别变成纯广告页。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="sec-hg" id="news">
+    <div class="wrap">
+      <h2 class="sec-title">短剧资讯动态</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <h4>短剧市场2026年Q4观察：精品化趋势明显</h4>
+          <div class="news-date">2026年11月6日</div>
+          <p>随着用户审美提升，短剧制作成本与质量同步上升。悬疑、现实题材占比增加，头部作品开始尝试电影级制作。</p>
+        </div>
+        <div class="news-card">
+          <h4>黄果短剧官方入口热门剧目周榜更新</h4>
+          <div class="news-date">2026年11月5日</div>
+          <p>本周《逆风翻盘》蝉联热度榜首，《第七夜》凭借反转剧情升至第二，甜宠类整体热度略有回落。</p>
+        </div>
+        <div class="news-card">
+          <h4>短剧用户行为报告：近七成用户有追更习惯</h4>
+          <div class="news-date">2026年11月3日</div>
+          <p>调研显示，短剧用户中约67%会固定追更至少一部作品，都市逆袭与悬疑题材的追更粘性最高。</p>
+        </div>
+        <div class="news-card">
+          <h4>《凤归朝》导演专访：短剧也要讲好故事</h4>
+          <div class="news-date">2026年10月30日</div>
+          <p>导演表示古装短剧不能只靠服化道，权谋逻辑和人物动机同样重要，后续剧情将迎来更大格局。</p>
+        </div>
+        <div class="news-card">
+          <h4>短剧出海加速：多部作品登陆海外平台</h4>
+          <div class="news-date">2026年10月28日</div>
+          <p>国产短剧在东南亚市场表现亮眼，甜宠与逆袭题材接受度较高，部分作品已启动本地化改编。</p>
+        </div>
+        <div class="news-card">
+          <h4>如何识别注水短剧？用户总结三大信号</h4>
+          <div class="news-date">2026年10月25日</div>
+          <p>评论区高频出现“回忆杀太多”“配角加戏”“主线停滞”等关键词时，通常意味着剧集开始注水。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer-hg" id="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-hg" style="margin-bottom:12px;">
+            <span class="logo-badge" style="width:32px;height:32px;font-size:1.1rem;">黄</span>
+            <span class="logo-text" style="font-size:1.2rem;">黄果短剧</span>
+          </div>
+          <p>聚合黄果短剧官方入口相关热门内容、类型分析与用户口碑，为短剧爱好者提供清晰的内容导航与消费参考。页面内容持续更新，欢迎收藏。</p>
+        </div>
+        <div>
+          <h5>内容导航</h5>
+          <ul>
+            <li><a href="/#hot">热门推荐</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>帮助与反馈</h5>
+          <ul>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comment">用户评论</a></li>
+            <li><a href="/#news">资讯动态</a></li>
+            <li><a href="/#cat">分类入口</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>友情链接</h5>
+          <ul>
+            <li><a href="#">短剧内容交流社区（占位）</a></li>
+            <li><a href="#">影视资讯平台（占位）</a></li>
+            <li><a href="#">移动端内容导航（占位）</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 黄果短剧官方入口 · 内容聚合专题页</span>
+        <span>免责声明：本页为内容导航与信息聚合页面，不直接提供视频存储与播放服务，具体入口请以官方发布为准。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+          </html>
