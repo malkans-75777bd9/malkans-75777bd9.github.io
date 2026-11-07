@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>四虎影视-热门剧集_最新电影_高清片库推荐</title>
+<meta name="description" content="四虎影视汇聚热门剧集、最新电影与高分片单，提供类型解析、更新追踪、观看指南与影迷讨论。这里能快速找到值得看的影视内容，适合追剧党与电影爱好者收藏浏览。">
+<meta name="keywords" content="四虎影视,热门剧集,最新电影,高清片库,影视推荐">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d0f1a'/%3E%3Cpath d='M30 28h40v12H30zm0 18h40v12H30zm0 18h40v12H30z' fill='%23f59e0b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0b0d14;
+  --bg-soft:#13161f;
+  --card:#181c28;
+  --card-hover:#1f2434;
+  --border:#2a2f42;
+  --text:#e8eaf0;
+  --text-soft:#9aa0b2;
+  --accent:#f59e0b;
+  --accent-soft:#b45309;
+  --neon:#fbbf24;
+  --radius:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.45);
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px;}
+/* 导航 */
+.navbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(11,13,20,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;gap:20px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:1.3rem;letter-spacing:1px;
+  color:var(--neon);white-space:nowrap;
+}
+.logo-mark{
+  width:34px;height:34px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),#ef4444);
+  display:grid;place-items:center;font-size:.9rem;font-weight:900;color:#1a1a1a;
+}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap;}
+.nav-links a{
+  font-size:.92rem;color:var(--text-soft);transition:.2s;
+  padding:4px 0;border-bottom:2px solid transparent;
+}
+.nav-links a:hover{color:var(--neon);border-bottom-color:var(--accent);}
+.nav-search{
+  display:flex;align-items:center;gap:8px;
+  background:var(--bg-soft);border:1px solid var(--border);
+  border-radius:30px;padding:6px 14px;min-width:200px;
+}
+.nav-search input{
+  background:transparent;border:none;outline:none;color:var(--text);
+  font-size:.88rem;width:100%;
+}
+.nav-search input::placeholder{color:#5b617a;}
+.nav-search button{
+  background:var(--accent);border:none;color:#111;font-weight:700;
+  border-radius:20px;padding:4px 12px;cursor:pointer;font-size:.8rem;
+}
+/* Banner */
+.hero{
+  background:
+    radial-gradient(ellipse at 20% 0%,rgba(245,158,11,.13),transparent 55%),
+    radial-gradient(ellipse at 80% 100%,rgba(239,68,68,.10),transparent 55%),
+    var(--bg-soft);
+  border-bottom:1px solid var(--border);
+  padding:54px 0 44px;
+}
+.hero h1{
+  font-size:2.4rem;font-weight:900;line-height:1.25;
+  letter-spacing:1px;color:#fff;
+}
+.hero h1 span{color:var(--neon);}
+.hero p{
+  color:var(--text-soft);font-size:1.02rem;max-width:720px;margin-top:14px;
+}
+.hero-search{
+  display:flex;gap:10px;max-width:580px;margin-top:24px;
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:40px;padding:8px 8px 8px 20px;
+}
+.hero-search input{
+  flex:1;background:transparent;border:none;outline:none;color:var(--text);
+  font-size:.98rem;
+}
+.hero-search button{
+  background:linear-gradient(135deg,var(--accent),#f97316);
+  border:none;color:#111;font-weight:800;padding:10px 26px;
+  border-radius:30px;cursor:pointer;font-size:.95rem;
+}
+.hero-btns{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;
+}
+.hero-btns a{
+  font-size:.86rem;padding:7px 18px;border-radius:24px;
+  background:rgba(255,255,255,.05);border:1px solid var(--border);
+  color:var(--text-soft);transition:.2s;
+}
+.hero-btns a:hover{background:var(--accent);color:#111;border-color:var(--accent);}
+/* 通用 section */
+.section{padding:52px 0;}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:26px;flex-wrap:wrap;gap:12px;
+}
+.section-head h2{
+  font-size:1.6rem;font-weight:800;color:#fff;
+  display:flex;align-items:center;gap:10px;
+}
+.section-head h2::before{
+  content:"";width:5px;height:24px;border-radius:3px;
+  background:linear-gradient(180deg,var(--neon),var(--accent-soft));
+}
+.section-head .more{font-size:.86rem;color:var(--text-soft);}
+.section-head .more:hover{color:var(--neon);}
+/* 卡片网格 */
+.grid{display:grid;gap:20px;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  transition:.25s;box-shadow:var(--shadow);
+}
+.card:hover{transform:translateY(-4px);background:var(--card-hover);border-color:var(--accent-soft);}
+.card-cover{
+  height:120px;display:grid;place-items:center;
+  font-size:1.6rem;font-weight:900;color:rgba(245,158,11,.75);
+  background:linear-gradient(135deg,#1a1f30,#232a3e);
+  letter-spacing:2px;
+}
+.card-body{padding:16px 18px 18px;}
+.card-body h3{font-size:1.02rem;font-weight:700;color:#fff;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;}
+.tag{
+  font-size:.7rem;padding:2px 9px;border-radius:20px;
+  background:rgba(245,158,11,.12);color:var(--neon);
+  border:1px solid rgba(245,158,11,.2);
+}
+.card-body p{font-size:.85rem;color:var(--text-soft);line-height:1.6;}
+.card-meta{
+  display:flex;justify-content:space-between;margin-top:12px;
+  font-size:.76rem;color:#6b7289;
+}
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.cat-item{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:18px 16px;text-align:center;
+  transition:.2s;cursor:pointer;
+}
+.cat-item:hover{background:var(--accent);color:#111;border-color:var(--accent);}
+.cat-item .ico{font-size:1.5rem;margin-bottom:6px;}
+.cat-item span{font-size:.9rem;font-weight:600;}
+/* 最新更新列表 */
+.update-list{display:flex;flex-direction:column;gap:2px;}
+.update-item{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:13px 16px;border-radius:10px;transition:.2s;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.update-item:hover{background:rgba(245,158,11,.06);}
+.update-item .title{font-size:.93rem;color:var(--text);}
+.update-item .title b{color:var(--neon);font-weight:600;}
+.update-item .time{font-size:.78rem;color:#6b7289;white-space:nowrap;margin-left:12px;}
+/* 深度解析正文 */
+.article-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:32px 34px;
+}
+.article-box h3{
+  font-size:1.2rem;color:var(--neon);margin:22px 0 10px;
+}
+.article-box h3:first-child{margin-top:0;}
+.article-box p{
+  font-size:.94rem;color:var(--text-soft);line-height:1.9;margin-bottom:12px;
+}
+.article-box strong{color:#fff;font-weight:600;}
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+.faq-item{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:18px 22px;
+}
+.faq-item h4{
+  font-size:.98rem;font-weight:700;color:#fff;margin-bottom:8px;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.faq-item h4 .num{
+  color:var(--accent);font-weight:900;font-size:.86rem;
+  background:rgba(245,158,11,.12);border-radius:6px;
+  padding:1px 8px;flex-shrink:0;
+}
+.faq-item p{font-size:.88rem;color:var(--text-soft);padding-left:32px;}
+/* 评论 */
+.comment-list{display:flex;flex-direction:column;gap:14px;}
+.comment{
+  display:flex;gap:14px;background:var(--card);
+  border:1px solid var(--border);border-radius:12px;padding:16px 18px;
+}
+.avatar{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;font-weight:800;font-size:.9rem;
+  color:#111;background:linear-gradient(135deg,var(--neon),#f97316);
+}
+.comment-body{flex:1;}
+.comment-body .name{font-size:.9rem;font-weight:700;color:#fff;}
+.comment-body .date{font-size:.74rem;color:#6b7289;margin-left:8px;}
+.comment-body p{font-size:.86rem;color:var(--text-soft);margin-top:4px;}
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.news-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:20px;
+  transition:.2s;
+}
+.news-card:hover{background:var(--card-hover);}
+.news-card .date{font-size:.76rem;color:var(--accent);margin-bottom:6px;}
+.news-card h4{font-size:.95rem;color:#fff;margin-bottom:6px;}
+.news-card p{font-size:.82rem;color:var(--text-soft);}
+/* 订阅 */
+.subscribe{
+  background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(239,68,68,.08));
+  border:1px solid rgba(245,158,11,.25);border-radius:var(--radius);
+  padding:36px 30px;display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:20px;
+}
+.subscribe h3{font-size:1.3rem;color:#fff;}
+.subscribe p{font-size:.88rem;color:var(--text-soft);margin-top:4px;}
+.subscribe form{display:flex;gap:10px;flex-wrap:wrap;}
+.subscribe input{
+  background:var(--bg);border:1px solid var(--border);border-radius:30px;
+  padding:10px 20px;color:var(--text);outline:none;min-width:220px;
+}
+.subscribe button{
+  background:var(--accent);border:none;color:#111;font-weight:800;
+  border-radius:30px;padding:10px 26px;cursor:pointer;
+}
+/* 页脚 */
+.footer{
+  background:var(--bg-soft);border-top:1px solid var(--border);
+  padding:42px 0 26px;margin-top:20px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;
+}
+.footer h5{font-size:.92rem;color:#fff;margin-bottom:12px;}
+.footer p,.footer a{font-size:.82rem;color:var(--text-soft);line-height:2;}
+.footer a:hover{color:var(--neon);}
+.footer-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid var(--border);
+  text-align:center;font-size:.78rem;color:#5b617a;
+}
+/* 响应式 */
+@media(max-width:960px){
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .news-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+@media(max-width:640px){
+  .hero h1{font-size:1.7rem;}
+  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .news-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .article-box{padding:22px 18px;}
+  .subscribe{padding:24px 18px;}
+  .nav-search{display:none;}
+  .update-item .time{display:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="navbar" id="nav">
+  <div class="container nav-inner">
+    <a href="/#hero" class="logo">
+      <span class="logo-mark">四</span>四虎影视
+    </a>
+    <nav class="nav-links">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#update">最新更新</a>
+      <a href="/#category">分类片库</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comment">影迷评论</a>
+      <a href="/#news">资讯</a>
+    </nav>
+    <div class="nav-search">
+      <input type="text" placeholder="搜剧集 / 电影 / 演员">
+      <button>搜索</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏Banner -->
+<section class="hero" id="hero">
+  <div class="container">
+    <h1><span>四虎影视</span>——热门剧集与最新电影的高清片库</h1>
+    <p>聚焦当下热播剧集、院线新片与高分经典，按类型、口碑、更新节奏分类整理。无论你是追剧党还是周末电影爱好者，都能在这里快速找到值得打开的那一部。</p>
+    <p>页面提供热门推荐、更新追踪、类型解析、影迷讨论与常见问题，帮助你在海量内容中缩短选择时间。</p>
+    <form class="hero-search" onsubmit="return false;">
+      <input type="text" placeholder="输入片名、类型或演员，例如：悬疑剧、科幻电影">
+      <button>立即查找</button>
+    </form>
+    <div class="hero-btns">
+      <a href="/#hot">热门片单</a>
+      <a href="/#update">今日更新</a>
+      <a href="/#category">类型分类</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">观看指南</a>
+      <a href="/#comment">影迷评论</a>
+      <a href="/#news">影视资讯</a>
+      <a href="/#subscribe">订阅追踪</a>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="section" id="intro">
+  <div class="container">
+    <div class="section-head">
+      <h2>关于四虎影视的内容定位</h2>
+    </div>
+    <div class="article-box">
+      <p><strong>四虎影视</strong>是一个面向影视爱好者的内容聚合页面，核心价值在于帮助用户从大量剧集和电影中快速筛选出符合个人口味的内容。页面围绕“热门、更新、类型、口碑”四个维度组织信息，让浏览者不必反复跳转就能了解当前值得关注的影视作品。</p>
+      <p>对于喜欢追剧的用户，这里提供最新更新列表和追更提示；对于电影爱好者，页面整理了高分片单和类型解析；对于偶尔观看的用户，FAQ 和观看指南能降低选择成本。四虎影视不生产内容，而是对公开影视信息进行整理和推荐，让内容消费更有方向感。</p>
+      <p>如果你经常遇到“打开页面不知道看什么”的情况，这个页面可以作为你的影视决策入口。所有推荐都围绕内容本身展开，不依赖夸张标题，适合收藏后反复浏览。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="section" id="hot">
+  <div class="container">
+    <div class="section-head">
+      <h2>本周热门推荐</h2>
+      <a href="/#update" class="more">更多更新 →</a>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-cover">悬疑</div>
+        <div class="card-body">
+          <h3>迷雾追踪·第二季</h3>
+          <div class="tags"><span class="tag">悬疑</span><span class="tag">犯罪</span><span class="tag">12集</span></div>
+          <p>一桩旧案重启调查，双时间线交叉推进。节奏紧凑，线索密度高，适合喜欢推理和反转的观众。</p>
+          <div class="card-meta"><span>热度 9.2</span><span>更新至第8集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover">科幻</div>
+        <div class="card-body">
+          <h3>星环之外</h3>
+          <div class="tags"><span class="tag">科幻</span><span class="tag">太空</span><span class="tag">电影</span></div>
+          <p>近未来太空站失联事件，硬核设定与人性抉择并重。视觉风格冷峻，适合科幻迷和二刷党。</p>
+          <div class="card-meta"><span>评分 8.7</span><span>高清上线</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover">都市</div>
+        <div class="card-body">
+          <h3>夜班编辑部</h3>
+          <div class="tags"><span class="tag">都市</span><span class="tag">职场</span><span class="tag">24集</span></div>
+          <p>杂志社夜班小组的日常，轻喜剧外壳下讨论内容理想与现实压力。台词自然，角色群像鲜活。</p>
+          <div class="card-meta"><span>热度 8.9</span><span>更新至第16集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover">古装</div>
+        <div class="card-body">
+          <h3>山河入梦</h3>
+          <div class="tags"><span class="tag">古装</span><span class="tag">权谋</span><span class="tag">40集</span></div>
+          <p>架空王朝背景下的朝堂博弈，服化道考究，配角线完整。适合喜欢慢热群像剧的观众。</p>
+          <div class="card-meta"><span>评分 8.4</span><span>更新至第28集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover">喜剧</div>
+        <div class="card-body">
+          <h3>合租公寓204</h3>
+          <div class="tags"><span class="tag">喜剧</span><span class="tag">生活</span><span class="tag">20集</span></div>
+          <p>四个性格迥异的年轻人合租故事，单元剧结构，笑点密集。适合下饭和放松观看。</p>
+          <div class="card-meta"><span>热度 8.6</span><span>已完结</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-cover">纪录片</div>
+        <div class="card-body">
+          <h3>城市褶皱</h3>
+          <div class="tags"><span class="tag">纪录</span><span class="tag">人文</span><span class="tag">6集</span></div>
+          <p>记录六座城市里普通人的日常空间，镜头克制，旁白不煽情。适合喜欢真实叙事的观众。</p>
+          <div class="card-meta"><span>评分 9.1</span><span>全6集已上线</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="update">
+  <div class="container">
+    <div class="section-head">
+      <h2>最新更新与热播动态</h2>
+      <span class="more">2026年11月7日 更新</span>
+    </div>
+    <div class="update-list">
+      <div class="update-item"><span class="title"><b>迷雾追踪·第二季</b> 第8集已上线，关键证据浮出水面</span><span class="time">11月7日</span></div>
+      <div class="update-item"><span class="title"><b>夜班编辑部</b> 第16集更新，新选题引发组内分歧</span><span class="time">11月7日</span></div>
+      <div class="update-item"><span class="title"><b>山河入梦</b> 第28集更新，朝堂线进入转折</span><span class="time">11月6日</span></div>
+      <div class="update-item"><span class="title"><b>星环之外</b> 高清版上线，附带幕后制作特辑</span><span class="time">11月6日</span></div>
+      <div class="update-item"><span class="title"><b>合租公寓204</b> 全20集完结，番外篇本周五上线</span><span class="time">11月5日</span></div>
+      <div class="update-item"><span class="title"><b>城市褶皱</b> 第5集上线，聚焦老城区菜市场</span><span class="time">11月5日</span></div>
+      <div class="update-item"><span class="title"><b>长夜将明</b> 新剧定档11月12日，悬疑题材接档</span><span class="time">11月4日</span></div>
+      <div class="update-item"><span class="title"><b>风起南洋</b> 第22集更新，海外拍摄花絮同步放出</span><span class="time">11月4日</span></div>
+      <div class="update-item"><span class="title"><b>三体·动画版</b> 第二季制作确认，预计明年上线</span><span class="time">11月3日</span></div>
+      <div class="update-item"><span class="title"><b>深海回声</b> 电影上线流媒体，评分稳定在8.3</span><span class="time">11月3日</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="category">
+  <div class="container">
+    <div class="section-head">
+      <h2>按类型浏览片库</h2>
+    </div>
+    <div class="cat-grid">
+      <a href="/#hot" class="cat-item"><div class="ico">🔍</div><span>悬疑推理</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">🚀</div><span>科幻未来</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">🏙️</div><span>都市情感</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">🏯</div><span>古装权谋</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">😄</div><span>喜剧生活</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">🎬</div><span>高分电影</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">📺</div><span>纪录片</span></a>
+      <a href="/#hot" class="cat-item"><div class="ico">🎞️</div><span>经典老片</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="deep">
+  <div class="container">
+    <div class="section-head">
+      <h2>深度解析：如何理解四虎影视的推荐逻辑</h2>
+    </div>
+    <div class="article-box">
+      <h3>类型覆盖与内容选择</h3>
+      <p>四虎影视在内容选择上并不追求数量堆砌，而是围绕用户的实际观看场景组织片单。悬疑、科幻、都市、古装、喜剧、纪录片等类型分别对应不同的消费需求：悬疑满足推理快感，科幻提供世界观想象，都市剧贴近日常情绪，古装剧侧重群像和权谋叙事。页面将热门作品与类型入口并列，让用户既能直接点开推荐，也能按偏好自行探索。</p>
+      <h3>更新节奏与追更体验</h3>
+      <p>剧集内容的吸引力很大程度取决于更新节奏。四虎影视在最新更新模块中标注了集数和上线时间，帮助追更用户判断是否适合“养肥再看”或“实时跟进”。对于周更剧集，页面会在更新列表中提前提示关键节点；对于已完结作品，则标注全集体量，方便一次性补完。这种信息组织方式比单纯罗列片名更贴近真实观看习惯。</p>
+      <h3>口碑与热度并重</h3>
+      <p>热门推荐卡片同时呈现热度值和评分信息，避免单一指标误导。高分作品不一定适合所有人，热度高的作品也可能存在争议。四虎影视的推荐逻辑是把“大众关注度”和“内容完成度”分开呈现，让用户根据自身偏好做判断。例如，一部视觉出色但节奏偏慢的电影，会在卡片中注明风格倾向，而不是简单标为“必看”。</p>
+      <h3>适合人群与使用方式</h3>
+      <p>这个页面适合三类用户：一是每周固定追剧、需要快速了解更新动态的观众；二是周末想找一部电影、但不愿花太多时间筛选的用户；三是对特定类型有偏好、希望发现同类作品的内容爱好者。四虎影视通过分类入口、热门推荐和深度解析三个层次，分别满足快速浏览、目标查找和延伸阅读的需求。</p>
+      <h3>与同类内容页面的差异</h3>
+      <p>很多影视聚合页面只做标题列表，四虎影视则补充了简短的看点说明和类型标签，降低点击前的判断成本。页面不提供播放功能，而是专注于信息整理和决策辅助。这种定位让内容更轻，也更容易在浏览过程中形成收藏习惯。对于搜索“四虎影视”的用户来说，这里更像一个影视选片参考页，而不是单纯的资源入口。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="section" id="guide">
+  <div class="container">
+    <div class="section-head">
+      <h2>页面体验与使用建议</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="card-body"><h3>分类筛选清晰</h3><p>按悬疑、科幻、都市、古装等类型快速定位，减少漫无目的浏览。</p></div></div>
+      <div class="card"><div class="card-body"><h3>更新信息直观</h3><p>最新更新列表标注集数和时间，追更用户一眼判断进度。</p></div></div>
+      <div class="card"><div class="card-body"><h3>移动端友好</h3><p>卡片和列表在手机端自动单列排布，阅读和点击都更顺手。</p></div></div>
+      <div class="card"><div class="card-body"><h3>适合收藏</h3><p>页面结构稳定，适合加入浏览器收藏夹作为日常选片入口。</p></div></div>
+      <div class="card"><div class="card-body"><h3>推荐路径清晰</h3><p>热门推荐、分类入口和深度解析互相衔接，方便扩展浏览。</p></div></div>
+      <div class="card"><div class="card-body"><h3>评论有参考性</h3><p>影迷评论包含推荐、吐槽和讨论，帮助判断内容是否合口味。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>常见问题</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4><span class="num">01</span>四虎影视主要收录什么类型的影视内容？</h4>
+        <p>页面以热门剧集、院线电影和高分经典为主，覆盖悬疑、科幻、都市、古装、喜剧、纪录片等类型。内容以信息整理和推荐为主，不提供在线播放，适合用于选片参考和更新追踪。</p>
+      </div>
+      <div class="faq-item">
+        <h4><span class="num">02</span>如何快速找到最近更新的剧集？</h4>
+        <p>可以直接查看“最新更新”模块，按时间倒序排列，标注了剧名、集数和上线日期。首页导航也有更新入口，适合追更用户每天快速扫一眼。</p>
+      </div>
+      <div class="faq-item">
+        <h4><span class="num">03</span>热门推荐里的评分和热度是什么意思？</h4>
+        <p>评分反映内容口碑和完成度，热度反映近期讨论量和关注度。两者结合看更客观：高分但热度一般的作品可能偏小众，热度高但评分中等的作品可能更适合休闲观看。</p>
+      </div>
+      <div class="faq-item">
+        <h4><span class="num">04</span>页面适合哪些人使用？</h4>
+        <p>适合经常追剧、喜欢电影但不想花太多时间筛选的观众，也适合对特定类型有偏好、希望发现同类作品的内容爱好者。如果你只是偶尔观看，FAQ 和分类入口也能帮你快速做决定。</p>
+      </div>
+      <div class="faq-item">
+        <h4><span class="num">05</span>四虎影视会推荐冷门作品吗？</h4>
+        <p>会。热门推荐以大众关注度为主，但深度解析和类型分类中会涉及口碑较好、讨论度相对较低的作品。页面希望兼顾“大家都在看”和“可能适合你”两种需求。</p>
+      </div>
+      <div class="faq-item">
+        <h4><span class="num">06</span>如何关注后续更新和专题内容？</h4>
+        <p>可以收藏本页，或使用页面底部的订阅入口。后续会围绕类型片单、季度新剧和影迷讨论更新内容。资讯模块也会同步影视动态，方便了解定档和上线信息。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评论 -->
+<section class="section" id="comment">
+  <div class="container">
+    <div class="section-head">
+      <h2>影迷评论</h2>
+      <span class="more">近30天讨论</span>
+    </div>
+    <div class="comment-list">
+      <div class="comment"><div class="avatar">林</div><div class="comment-body"><span class="name">林深见鹿</span><span class="date">2026-11-06</span><p>迷雾追踪第二季比第一季节奏更稳，第8集那个证据出现的时候确实没想到。希望后面别烂尾。</p></div></div>
+      <div class="comment"><div class="avatar">阿</div><div class="comment-body"><span class="name">阿柴不柴</span><span class="date">2026-11-05</span><p>星环之外的画面真的可以，太空站失重那段拍得很细。剧情稍微慢热，但看到一半就进去了。</p></div></div>
+      <div class="comment"><div class="avatar">南</div><div class="comment-body"><span class="name">南窗听雨</span><span class="date">2026-11-05</span><p>夜班编辑部挺下饭的，台词不尬，职场部分也没有过度夸张。适合下班后随便点开一集。</p></div></div>
+      <div class="comment"><div class="avatar">老</div><div class="comment-body"><span class="name">老猫不吃鱼</span><span class="date">2026-11-04</span><p>山河入梦服化道是真好，但节奏偏慢，适合有耐心看群像的人。我追到28集觉得配角比主角线好看。</p></div></div>
+      <div class="comment"><div class="avatar">C</div><div class="comment-body"><span class="name">Cici_204</span><span class="date">2026-11-04</span><p>合租公寓204完结了有点舍不得，虽然有些梗比较老，但四个人化学反应不错。番外快点上吧。</p></div></div>
+      <div class="comment"><div class="avatar">山</div><div class="comment-body"><span class="name">山今</span><span class="date">2026-11-03</span><p>城市褶皱是意外发现，纪录片拍得不煽情，菜市场那集看了两遍。希望多推荐这类真实感强的作品。</p></div></div>
+      <div class="comment"><div class="avatar">月</div><div class="comment-body"><span class="name">月半小夜曲</span><span class="date">2026-11-02</span><p>这个页面整理得挺清楚的，比在视频平台翻半天强。就是希望更新列表能再多点电影信息。</p></div></div>
+      <div class="comment"><div class="avatar">一</div><div class="comment-body"><span class="name">一只阿飘</span><span class="date">2026-11-01</span><p>深海回声评分8.3感觉偏高了一点，结尾收得有点急。不过中段氛围确实不错，喜欢深海题材可以看看。</p></div></div>
+      <div class="comment"><div class="avatar">北</div><div class="comment-body"><span class="name">北纬三十度</span><span class="date">2026-10-30</span><p>四虎影视的分类入口挺实用的，我一般直接点悬疑，省得自己翻。希望后面加个按年份筛选。</p></div></div>
+      <div class="comment"><div class="avatar">小</div><div class="comment-body"><span class="name">小满未满</span><span class="date">2026-10-28</span><p>长夜将明定档了，看预告质感不错。希望上线后页面能及时更新，别错过首播。</p></div></div>
+      <div class="comment"><div class="avatar">顾</div><div class="comment-body"><span class="name">顾言</span><span class="date">2026-10-26</span><p>古装剧最近有点多，山河入梦算是制作比较认真的。权谋线不复杂，但人物关系写得细。</p></div></div>
+      <div class="comment"><div class="avatar">K</div><div class="comment-body"><span class="name">K先生</span><span class="date">2026-10-24</span><p>建议热门推荐里多标注一下单集时长，有些剧一集45分钟，有些60分钟，通勤看和在家看需求不一样。</p></div></div>
+      <div class="comment"><div class="avatar">桃</div><div class="comment-body"><span class="name">桃子汽水</span><span class="date">2026-10-22</span><p>夜班编辑部最新那集选题分歧写得太真实了，做过内容的人应该都有共鸣。轻喜剧能写到这个程度不错。</p></div></div>
+      <div class="comment"><div class="avatar">雾</div><div class="comment-body"><span class="name">雾里看花</span><span class="date">2026-10-20</span><p>总体来说这个页面适合当选片参考，不吹不黑。有些推荐不一定合我口味，但至少信息给得清楚。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-head">
+      <h2>影视资讯速递</h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-card"><div class="date">2026-11-07</div><h4>悬疑剧集持续升温，多部新作定档年末</h4><p>四虎影视更新列表显示，悬疑类型仍是近期关注焦点，长夜将明等新剧将在11月中旬接档。</p></div>
+      <div class="news-card"><div class="date">2026-11-06</div><h4>星环之外幕后特辑上线，硬核设定引讨论</h4><p>电影上线流媒体后，太空站场景设计和物理细节成为观众讨论重点，二刷比例明显上升。</p></div>
+      <div class="news-card"><div class="date">2026-11-05</div><h4>合租公寓204完结，番外篇本周五上线</h4><p>轻喜剧生活剧完结后热度保持稳定，平台确认番外篇将补充两条配角支线。</p></div>
+      <div class="news-card"><div class="date">2026-11-04</div><h4>山河入梦进入后半程，朝堂线迎来关键转折</h4><p>剧集更新至第28集，权谋线节奏加快，观众对配角命运走向讨论增多。</p></div>
+      <div class="news-card"><div class="date">2026-11-03</div><h4>纪录片城市褶皱口碑稳定，人文题材受关注</h4><p>该片以克制镜头记录城市日常空间，评分维持在9分以上，适合喜欢真实叙事的观众。</p></div>
+      <div class="news-card"><div class="date">2026-11-02</div><h4>四虎影视页面更新，分类与追更信息优化</h4><p>最新版本调整了更新列表排序，并增加类型入口的视觉引导，方便用户快速定位内容。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="section" id="subscribe">
+  <div class="container">
+    <div class="subscribe">
+      <div>
+        <h3>订阅四虎影视更新提醒</h3>
+        <p>输入邮箱，获取每周热门片单和追更提示，不频繁打扰。</p>
+      </div>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="你的邮箱地址">
+        <button>订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h5>四虎影视</h5>
+        <p>影视内容推荐与更新追踪页面，专注于剧集、电影和纪录片的类型整理与口碑参考。所有信息仅供浏览决策使用，不提供在线播放。</p>
+      </div>
+      <div>
+        <h5>快速入口</h5>
+        <a href="/#hot">热门推荐</a><br>
+        <a href="/#update">最新更新</a><br>
+        <a href="/#category">分类片库</a><br>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h5>内容分类</h5>
+        <a href="/#hot">悬疑推理</a><br>
+        <a href="/#hot">科幻未来</a><br>
+        <a href="/#hot">都市情感</a><br>
+        <a href="/#hot">古装权谋</a>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <a href="#">影视资料站</a><br>
+        <a href="#">片单推荐</a><br>
+        <a href="#">影迷社区</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 四虎影视 · 内容聚合展示页 · 本站不存储任何影视资源，仅提供信息整理与推荐参考。
+    </div>
+  </div>
+</footer>
+
+</body>
+                                                        </html>
